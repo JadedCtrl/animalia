@@ -2,6 +2,8 @@
 -- Frog --
 ----------
 
+local S = minetest.get_translator("animalia")
+
 local random = math.random
 
 local vec_add = vector.add
@@ -475,5 +477,6 @@ creatura.register_mob("animalia:frog", {
 
 creatura.register_spawn_item("animalia:frog", {
 	col1 = "67942e",
-	col2 = "294811"
+	col2 = "294811",
+	description = S("Spawn Frog")
 })

@@ -2,6 +2,8 @@
 -- Pig --
 ---------
 
+local S = minetest.get_translator("animalia")
+
 creatura.register_mob("animalia:pig", {
 	-- Engine Props
 	visual_size = {x = 10, y = 10},
@@ -146,5 +148,6 @@ creatura.register_mob("animalia:pig", {
 
 creatura.register_spawn_item("animalia:pig", {
 	col1 = "e0b1a7",
-	col2 = "cc9485"
+	col2 = "cc9485",
+	description = S("Spawn Pig")
 })

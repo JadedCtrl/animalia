@@ -1,6 +1,7 @@
 ---------
 -- Owl --
 ---------
+local S = minetest.get_translator("animalia")
 
 local abs = math.abs
 
@@ -222,5 +223,6 @@ creatura.register_mob("animalia:owl", {
 
 creatura.register_spawn_item("animalia:owl", {
 	col1 = "412918",
-	col2 = "735b46"
+	col2 = "735b46",
+	description = S("Spawn Owl")
 })

@@ -2,6 +2,8 @@
 -- Fox --
 ---------
 
+local S = minetest.get_translator("animalia")
+
 local vec_dir, vec_dist = vector.direction, vector.distance
 local dir2yaw = minetest.dir_to_yaw
 
@@ -204,5 +206,6 @@ creatura.register_mob("animalia:fox", {
 
 creatura.register_spawn_item("animalia:fox", {
 	col1 = "d0602d",
-	col2 = "c9c9c9"
+	col2 = "c9c9c9",
+	description = S("Spawn Fox")
 })

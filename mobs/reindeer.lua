@@ -2,6 +2,8 @@
 -- Reindeer --
 --------------
 
+local S = minetest.get_translator("animalia")
+
 local random = math.random
 
 creatura.register_mob("animalia:reindeer", {
@@ -131,5 +133,6 @@ creatura.register_mob("animalia:reindeer", {
 
 creatura.register_spawn_item("animalia:reindeer", {
 	col1 = "413022",
-	col2 = "d5c0a3"
+	col2 = "d5c0a3",
+	description = S("Spawn Reindeer")
 })

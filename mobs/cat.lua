@@ -2,6 +2,8 @@
 -- Cat --
 ---------
 
+local S = minetest.get_translator("animalia")
+
 local random = math.random
 
 local vec_dist, vec_add, vec_sub = vector.distance, vector.add, vector.subtract
@@ -314,17 +316,17 @@ creatura.register_mob("animalia:cat", {
 			end
 			local order = self.order
 			if order == "wander" then
-				minetest.chat_send_player(clicker:get_player_name(), "Cat is following")
+				minetest.chat_send_player(clicker:get_player_name(), S("Cat is following"))
 				self.order = "follow"
 				self:initiate_utility("animalia:follow_player", self, clicker, true)
 				self:set_utility_score(0.7)
 			elseif order == "follow" then
-				minetest.chat_send_player(clicker:get_player_name(), "Cat is sitting")
+				minetest.chat_send_player(clicker:get_player_name(), S("Cat is sitting"))
 				self.order = "sit"
 				self:initiate_utility("animalia:stay", self)
 				self:set_utility_score(0.5)
 			else
-				minetest.chat_send_player(clicker:get_player_name(), "Cat is wandering")
+				minetest.chat_send_player(clicker:get_player_name(), S("Cat is wandering"))
 				self.order = "wander"
 				self:set_utility_score(0)
 			end
@@ -344,5 +346,6 @@ creatura.register_mob("animalia:cat", {
 
 creatura.register_spawn_item("animalia:cat", {
 	col1 = "db9764",
-	col2 = "cf8d5a"
+	col2 = "cf8d5a",
+	description = S("Spawn Cat")
 })

@@ -2,6 +2,8 @@
 -- Sheep --
 -----------
 
+local S = minetest.get_translator("animalia")
+
 local random = math.random
 
 local palette  = {
@@ -226,5 +228,6 @@ creatura.register_mob("animalia:sheep", {
 
 creatura.register_spawn_item("animalia:sheep", {
 	col1 = "f4e6cf",
-	col2 = "e1ca9b"
+	col2 = "e1ca9b",
+	description = S("Spawn Sheep")
 })

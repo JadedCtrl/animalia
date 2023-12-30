@@ -6,6 +6,8 @@ local libri = {}
 
 local path = minetest.get_modpath(minetest.get_current_modname())
 
+local S = minetest.get_translator("animalia")
+
 local color = minetest.colorize
 
 local libri_bg = {
@@ -444,7 +446,7 @@ iterate_libri_images()
 -- Craftitem
 
 minetest.register_craftitem("animalia:libri_animalia", {
-	description = "Libri Animalia",
+	description = S("Libri Animalia"),
 	inventory_image = "animalia_libri_animalia.png",
 	stack_max = 1,
 	on_place = function(itemstack, player)

@@ -2,6 +2,8 @@
 -- Horse --
 -----------
 
+local S = minetest.get_translator("animalia")
+
 local random = math.random
 
 local follows = {}
@@ -349,5 +351,6 @@ creatura.register_mob("animalia:horse", {
 
 creatura.register_spawn_item("animalia:horse", {
 	col1 = "ebdfd8",
-	col2 = "653818"
+	col2 = "653818",
+	description = S("Spawn Horse")
 })

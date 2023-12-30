@@ -2,6 +2,8 @@
 -- Turkey --
 ------------
 
+local S = minetest.get_translator("animalia")
+
 creatura.register_mob("animalia:turkey", {
 	-- Engine Props
 	visual_size = {x = 10, y = 10},
@@ -153,5 +155,6 @@ creatura.register_mob("animalia:turkey", {
 
 creatura.register_spawn_item("animalia:turkey", {
 	col1 = "352b22",
-	col2 = "2f2721"
+	col2 = "2f2721",
+	description = S("Spawn Turkey")
 })

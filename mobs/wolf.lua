@@ -2,6 +2,8 @@
 -- Wolf --
 ----------
 
+local S = minetest.get_translator("animalia")
+
 local function shared_owner(obj1, obj2)
 	if not obj1 or not obj2 then return false end
 	obj1 = creatura.is_valid(obj1)
@@ -220,17 +222,17 @@ creatura.register_mob("animalia:wolf", {
 		and clicker:get_player_control().sneak then
 			local order = self.order
 			if order == "wander" then
-				minetest.chat_send_player(name, "Wolf is following")
+				minetest.chat_send_player(name, S("Wolf is following"))
 				self.order = "follow"
 				self:initiate_utility("animalia:follow_player", self, clicker, true)
 				self:set_utility_score(0.7)
 			elseif order == "follow" then
-				minetest.chat_send_player(name, "Wolf is sitting")
+				minetest.chat_send_player(name, S("Wolf is sitting"))
 				self.order = "sit"
 				self:initiate_utility("animalia:stay", self)
 				self:set_utility_score(0.5)
 			else
-				minetest.chat_send_player(name, "Wolf is wandering")
+				minetest.chat_send_player(name, S("Wolf is wandering"))
 				self.order = "wander"
 				self:set_utility_score(0)
 			end
@@ -263,5 +265,6 @@ creatura.register_mob("animalia:wolf", {
 
 creatura.register_spawn_item("animalia:wolf", {
 	col1 = "a19678",
-	col2 = "231b13"
+	col2 = "231b13",
+	description = S("Spawn Wolf")
 })

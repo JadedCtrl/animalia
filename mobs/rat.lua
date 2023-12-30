@@ -2,6 +2,8 @@
 -- Mice --
 ----------
 
+local S = minetest.get_translator("animalia")
+
 local vec_add, vec_sub = vector.add, vector.subtract
 
 local function find_chest(self)
@@ -158,5 +160,6 @@ creatura.register_mob("animalia:rat", {
 
 creatura.register_spawn_item("animalia:rat", {
 	col1 = "605a55",
-	col2 = "ff936f"
+	col2 = "ff936f",
+	description = S("Spawn Rat")
 })

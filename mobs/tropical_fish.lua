@@ -2,6 +2,8 @@
 -- Fish --
 ----------
 
+local S = minetest.get_translator("animalia")
+
 creatura.register_mob("animalia:tropical_fish", {
 	-- Engine Props
 	visual_size = {x = 10, y = 10},
@@ -96,7 +98,8 @@ creatura.register_mob("animalia:tropical_fish", {
 
 creatura.register_spawn_item("animalia:tropical_fish", {
 	col1 = "e28821",
-	col2 = "f6e5d2"
+	col2 = "f6e5d2",
+	description = S("Spawn Tropical Fish")
 })
 
 animalia.alias_mob("animalia:clownfish", "animalia:tropical_fish")

@@ -2,6 +2,8 @@
 -- Bat --
 ---------
 
+local S = minetest.get_translator("animalia")
+
 local vec_dist = vector.distance
 
 local function get_home_pos(self)
@@ -213,5 +215,6 @@ creatura.register_mob("animalia:bat", {
 
 creatura.register_spawn_item("animalia:bat", {
 	col1 = "392517",
-	col2 = "321b0b"
+	col2 = "321b0b",
+	description = S("Spawn Bat")
 })

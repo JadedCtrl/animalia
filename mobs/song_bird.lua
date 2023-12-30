@@ -2,6 +2,8 @@
 -- Song Bird --
 ---------------
 
+local S = minetest.get_translator("animalia")
+
 local random = math.random
 
 creatura.register_mob("animalia:song_bird", {
@@ -147,7 +149,8 @@ creatura.register_mob("animalia:song_bird", {
 
 creatura.register_spawn_item("animalia:song_bird", {
 	col1 = "ae2f2f",
-	col2 = "f3ac1c"
+	col2 = "f3ac1c",
+	description = S("Spawn Song Bird")
 })
 
 minetest.register_entity("animalia:bird", {

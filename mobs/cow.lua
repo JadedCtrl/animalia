@@ -2,6 +2,8 @@
 -- Cow --
 ---------
 
+local S = minetest.get_translator("animalia")
+
 local random = math.random
 
 
@@ -171,7 +173,7 @@ creatura.register_mob("animalia:cow", {
 			end
 
 			if self.collected then
-				minetest.chat_send_player(name, "This Cow has already been milked.")
+				minetest.chat_send_player(name, S("This Cow has already been milked."))
 				return
 			end
 
@@ -198,5 +200,6 @@ creatura.register_mob("animalia:cow", {
 
 creatura.register_spawn_item("animalia:cow", {
 	col1 = "cac3a1",
-	col2 = "464438"
+	col2 = "464438",
+	description = S("Spawn Cow")
 })
